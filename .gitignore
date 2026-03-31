@@ -1,20 +1,47 @@
-### FNF-Specific
-# File used for the NG API. Should not be shared with others.
-APIStuff.hx
-art/build_x32-officialrelease.bat
-art/build_x64-officialrelease.bat
-art/test_x64-debug-officialrelease.bat
+dump/*
+.haxelib/*
+content/avas_evil_secrets/*
+
+### Mac
+.DS_Store
+.icloud
 
 ### VS Code
+vscode-project.hxml
 export/*
 .vscode/*
 *.code-workspace
+
 # Local history which shouldn't be shared.
 .history
 .ionide
+
 # ! means a file should be added regardless of it it gets ignored prior.
 # Including to allow others to use already set-up configuration tweaked for the project.
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# ── Android Signing ──────────────────────────────────────────────────────────
+# NEVER commit keystores or their encoded forms — losing the key = losing
+# the ability to update your app on Google Play.
+*.jks
+*.keystore
+*.b64
+*.base64
+
+# Local signing config (if you use a keystore.properties file locally)
+keystore.properties
+
+# Temporary APKs generated during local signing
+*-signed.apk
+*-aligned.apk
+
+# ── Android build artifacts ───────────────────────────────────────────────────
+*.apk
+*.aab
+
+# ── Mobile / OS artifacts ─────────────────────────────────────────────────────
+*.ipa
+Thumbs.db
